@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/purple_200"
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+   <ImageView
+       android:id="@+id/settingsBack"
+       android:clickable="true"
+       android:scaleType="centerInside"
+       android:src="@drawable/ic_baseline_arrow_back_24"
+       android:layout_width="50dp"
+       android:layout_height="match_parent"
+       android:focusable="true" />
+        <TextView
+            android:textColor="?actionMenuTextColor"
+            android:textStyle="bold"
+            android:paddingStart="15dp"
+            android:textSize="20dp"
+            android:gravity="center_vertical"
+            android:text="Sozlamalar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearLay"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+        <ImageView
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/image"
+            android:clickable="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_baseline_dark_mode_24"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:focusable="true" />
+        <TextView
+            android:textStyle="bold"
+            android:layout_weight="3"
+            android:textColor="?actionMenuTextColor"
+            android:textSize="18dp"
+            android:paddingStart="20dp"
+            android:gravity="center_vertical"
+            android:text="Qorong'i rejim"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"/>
+        <Switch
+            android:theme="@style/SwitchStyle"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/switchView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="UseSwitchCompatOrMaterialXml" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
